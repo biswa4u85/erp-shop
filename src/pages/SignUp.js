@@ -12,6 +12,7 @@ function SignUp() {
     let results = await apiPostCall('/', params, window.frappe?.csrf_token)
     if (results && results[1]) {
       toast.error(results[1]);
+      setTimeout(() => navigate('/login'), 100)
     }
   };
 
