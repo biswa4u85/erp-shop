@@ -10,6 +10,7 @@ import {
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import SignUp from "../pages/SignUp";
 import Login from "../pages/Login";
+import Layout from "../pages/Layout";
 import Home from "../pages/Home";
 import Shop from "../pages/Shop";
 import Details from "../pages/Details";
@@ -29,14 +30,16 @@ function Routers() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/details" element={<Details />} />
-        <Route element={<RequireAuth />}>
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/orders" element={<Orders />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/details" element={<Details />} />
+          <Route element={<RequireAuth />}>
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/orders" element={<Orders />} />
+          </Route>
         </Route>
       </Routes>
     </HashRouter>
