@@ -26,7 +26,7 @@ function Layout() {
                     <NavLink className="nav-link " to={"/shop"}>SHOP</NavLink>
                   </li>
                   <li className="nav-item px-3">
-                    <NavLink className="nav-link" to={"#"}>MOST POPULAR</NavLink>
+                    <NavLink className="nav-link" to={"/cart"}>MOST POPULAR</NavLink>
                   </li>
                   <li className="nav-item px-3">
                     <NavLink className="nav-link" to={"#"}>DEALS</NavLink>

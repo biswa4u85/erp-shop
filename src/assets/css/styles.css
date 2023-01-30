@@ -47,10 +47,10 @@ background: none;
 .baynow-btn{
     background: linear-gradient(180deg, #ED1272 0%, #C34C9A 100%);
     border: none !important;
-    border-radius: 10px !important;
+    border-radius: 7px !important;
     color: #fff !important;
     width: 95px;
-    height: 34px;
+    height: 39px;
 }
 .login-btn :hover{color: #fff !important}
 
@@ -228,6 +228,8 @@ background: none;
 }
 .number-sec {
     border: 1px solid #000000;
+    width: 131px;
+    text-align: center;
 }
 .value-button {
     display: inline-block;
@@ -248,7 +250,7 @@ background: none;
     cursor: pointer;
 }
 form #decrease {
-    margin-right: -4px;
+    /* margin-right: -4px; */
     border-radius: 8px 0 0 8px;
 }
 form #increase {
@@ -301,6 +303,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .order-nav{
     display: block;
+    background-color: #F4F4F4;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
+    margin-top: 2px;
 }
 
 
@@ -370,6 +375,64 @@ input[type=number]::-webkit-outer-spin-button {
    .apply-code{margin-top: 20px;}
    .fliter-nav .order-nav{display: none;}
    .left-banner p{margin: 0 auto; padding: 20px;}
+
+/* incress */
+form {
+    width: 218px;
+    text-align: center;
+}
+
+.number-sec {width: 175px;margin: 0 auto;}
+        
+.value-button {
+    display: inline-block;
+    margin: 0px;
+    width: 8px;
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+form #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+
+form #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+}
+
+input#number {
+    text-align: center;
+    border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
 }
 @media only screen and (max-width: 575px){
     .product-sec{width: 50% !important;}
@@ -387,7 +450,7 @@ input[type=number]::-webkit-outer-spin-button {
     .footer-bg .input-group{
         width: 90%;
     } 
- .payment-option img{width: 52px;}
+ .payment-option img{width: 28px;}
  .single-product{
     text-align: center;
     margin-top: 20px;
@@ -419,6 +482,7 @@ input[type=number]::-webkit-outer-spin-button {
     .second-heading{text-align: center; margin-top: 10px;}
     .close.mx-4{margin:0 auto !important;}
     .number{text-align: center;}
+   .add-card.w-25{width: 35% !important;}
 
 }
 

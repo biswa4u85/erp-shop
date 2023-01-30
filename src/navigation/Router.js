@@ -36,9 +36,11 @@ function Routers() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/details" element={<Details />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/orders" element={<Orders />} />
           <Route element={<RequireAuth />}>
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/orders" element={<Orders />} />
+            {/* <Route path="/cart" element={<Cart />} /> */}
+            {/* <Route path="/orders" element={<Orders />} /> */}
           </Route>
         </Route>
       </Routes>

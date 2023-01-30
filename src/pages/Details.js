@@ -3,6 +3,14 @@ import { apiPostCall, apiPutCall } from '../hooks/SiteAPIs'
 import { useNavigate } from "react-router-dom";
 import { Row, Col, Checkbox } from 'antd';
 import { useLocalStorage } from '../hooks/useLocalStorage'
+import mobile from '../assets/images/mobile.png'
+import payment from '../assets/images/payment.png'
+import Stripe from '../assets/images/Stripe.png'
+import Frame from '../assets/images/Frame.png'
+import visa from '../assets/images/visa.png'
+import mastercard from '../assets/images/mastercard.png'
+import grob from '../assets/images/grob.png'
+import bigpay from '../assets/images/bigpay.png'
 
 function Details() {
   const navigate = useNavigate();
@@ -23,32 +31,80 @@ function Details() {
     setTimeout(() => navigate('/details'))
   }
 
+  // function increaseValue() {
+  //   var value = parseInt(document.getElementById('number').value, 10);
+  //   value = isNaN(value) ? 0 : value;
+  //   value++;
+  //   document.getElementById('number').value = value;
+  // }
+
+  // function decreaseValue() {
+  //   var value = parseInt(document.getElementById('number').value, 10);
+  //   value = isNaN(value) ? 0 : value;
+  //   value < 1 ? value = 1 : '';
+  //   value--;
+  //   document.getElementById('number').value = value;
+  // }
+
+
+
   return (
+
     <>
       <div className="contain-bg py-5 mt-1">
         <div className="container  ">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-6 ">
-              <div className="product-image"><img src="./assets/images/mobile.png" className="rounded mx-auto d-block" alt="..." />
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src={mobile} class=" w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src={mobile} class=" w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src={mobile} class=" w-100" alt="..." />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
             <div className="col-sm-12 col-md-12 col-lg-6">
               <div className="px-4 single-product">
                 <h5 className="fs-2">Name Product</h5>
                 <h6 className="fs-5 my-3">Product Name</h6>
-                <p className="lh-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                <p className="lh-lg w-75">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   lacus, auctor pretium ac ultrices.
                   Dui lacus dignissim tincidunt urna, at enim tempo. Pellentesque amet Lorem ipsum dolor sit
                   amet,
                 </p>
 
-                <div className="cart-btn">
-                  <button type="button" className="btn btn-outline-dark btn-sm rounded">Add to Cart </button>
+                <form class="number-sec">
+                  <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-
+                  </div>
+                  <input type="number" id="number" value="0" />
+                  <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+
+                  </div>
+                </form>
+
+                <div className="cart-btn mt-3">
+                  <button type="button" className="btn btn-outline-dark btn-sm rounded w-25 py-2 add-card">Add to Cart </button>
                   <button type="button" className="btn btn-secondary btn-sm baynow-btn rounded mx-3">Buy
                     Now</button>
-                  <i className="fa fa-heart" aria-hidden="true"></i>
+                  <i className="fa fa-heart fs-3" aria-hidden="true"></i>
                 </div>
-                <div className=" line-border pb-2 mb-4 mt-4 border-bottom border-2 border-light"></div>
+
+                <div className=" line-border pb-2 mb-4 mt-4 border-bottom border-4 border-light"></div>
 
                 <ul className="list-group list-group-horizontal">
                   <li className="list-group-item fw-light">
@@ -69,16 +125,22 @@ function Details() {
                   <h6 className="my-3">guaranteed safe checkout</h6>
                   <ul className="list-group list-group-horizontal">
                     <li className="list-group-item">
-                      <img src="./assets/images/payment.png" className=" d-block" alt="..." />
+                      <img src={Stripe} className=" d-block" alt="..." />
                     </li>
                     <li className="list-group-item">
-                      <img src="./assets/images/payment.png" className=" d-block" alt="..." />
+                      <img src={Frame} className=" d-block" alt="..." />
                     </li>
                     <li className="list-group-item ">
-                      <img src="./assets/images/payment.png" className=" d-block" alt="..." />
+                      <img src={ payment} className=" d-block" alt="..." />
                     </li>
                     <li className="list-group-item ">
-                      <img src="./assets/images/payment.png" className=" d-block" alt="..." />
+                      <img src={visa} className=" d-block" alt="..." />
+                    </li>
+                    <li className="list-group-item ">
+                      <img src={mastercard} className=" d-block" alt="..." />
+                    </li>
+                    <li className="list-group-item ">
+                      <img src={grob} className=" d-block" alt="..." />
                     </li>
                   </ul>
                 </div>
