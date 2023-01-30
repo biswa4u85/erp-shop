@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GKDUKAAN</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+</head>
+
+<body>
+    <!-- Nav-Section -->
+    <div class="header-section ">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#"><img src="./assets/images/logo-main.png" class="logo-image"
+                            alt="..."></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item px-3">
+                                <a class="nav-link active " aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link " href="#">SHOP</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="#">MOST POPULAR</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="#">DEALS</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <div class="input-group mb-3 mt-1">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"
+                                            aria-hidden="true"></i></span>
+                                    <input class="form-control me-2 w-53" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </div>
+                            </li>
+                        </ul>
+                        <i class="fa fa-bell-o me-4" aria-hidden="true"></i>
+
+                        <button type="button" class="btn btn-lg fs-6 login-btn">LOGIN</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Nav-end -->
+
+
+    <!-- Rightside-Drawer-start -->
+
+    <div class="container-fluid">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item px-3">
+                        <a class="nav-link active " aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link " href="#">SHOP</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">MOST POPULAR</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">DEALS</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <div class="input-group mb-3 mt-1">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"
+                                    aria-hidden="true"></i></span>
+                            <input class="form-control me-2 w-53" type="search" placeholder="Search"
+                                aria-label="Search">
+                        </div>
+                    </li>
+                    <li class="nav-item px-3">
+                        <i class="fa fa-bell-o me-4" aria-hidden="true"></i>
+
+                        <button type="button" class="btn btn-lg fs-6 login-btn">LOGIN</button>
+                    </li>
+                </ul>
+                <!-- <i class="fa fa-bell-o me-4" aria-hidden="true"></i>
+
+                    <button type="button" class="btn btn-lg fs-6 login-btn">LOGIN</button> -->
+            </div>
+        </div>
+    </div>
+    <!-- Rightside-Drawer-end -->
+
+    <div id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button> -->
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active my-4">
+                    <div class="row">
+                        <div class="col">
+                            <img src="./assets/images/product-1.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Mobile</h6>
+                        </div>
+
+                        <div class="col">
+                            <img src="./assets/images/product-1.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Fashion</h6>
+                        </div>
+
+                        <div class="col">
+                            <img src="./assets/images/product-1.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Electronics</h6>
+                        </div>
+
+                        <div class="col">
+                            <img src="./assets/images/product-1.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Appliance</h6>
+                        </div>
+
+                        <div class="col">
+                            <img src="./assets/images/product-1.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Toys</h6>
+                        </div>
+
+                        <div class="col gift">
+                            <img src="./assets/images/product-1.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Beauty</h6>
+                        </div>
+
+                        <div class="col gift">
+                            <img src="./assets/images/product-1.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Grocery</h6>
+                        </div>
+
+                        <div class="col gift">
+                            <img src="./assets/images/product-1.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">BestOffers</h6>
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+                <div class="carousel-item my-4">
+                    <div class="row">
+                        <div class="col">
+                            <img src="./assets/images/product-2.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Mobile</h6>
+                        </div>
+
+                        <div class="col">
+                            <img src="./assets/images/product-2.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Fashion</h6>
+                        </div>
+
+                        <div class="col">
+                            <img src="./assets/images/product-2.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Electronics</h6>
+                        </div>
+
+                        <div class="col">
+                            <img src="./assets/images/product-2.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Appliance</h6>
+                        </div>
+
+                        <div class="col">
+                            <img src="./assets/images/product-2.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Toys</h6>
+                        </div>
+
+                        <div class="col gift">
+                            <img src="./assets/images/product-2.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Beauty</h6>
+                        </div>
+
+                        <div class="col gift">
+                            <img src="./assets/images/product-2.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">Grocery</h6>
+                        </div>
+
+                        <div class="col gift">
+                            <img src="./assets/images/product-2.png" class="rounded mx-auto d-block h-50" alt="...">
+                            <h6 class="text-center fw-light">BestOffers</h6>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-banner position-relative my-3 pb-5">
+        <div class="position-absolute top-0 start-0 translate-middle">
+            <img src="./assets/images/vector.png" class=" d-block" alt="...">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-7 col-lg-7">
+                    <div class="left-banner  ">
+                        <h1 class="text-white fw-bold">Find the Best Product for You on GK Dukan</h1>
+                        <p class="fs-6 fw-normal text-white text-break">Lorem ipsum dolor sit amet, consectetur</br>
+                            adipiscing elit. Sed
+                            ullamcorper congue</br> eros, eget
+                            tincidunt
+                            ipsum eleifend ut. </p>
+                        <button class=" border-0 py-2 px-3 rounded-2">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-5 col-lg-5">
+                    <div class="banner-sec position-relative">
+                        <div class="vector-img position-absolute top-50 start-50 translate-middle">
+                            <img src="./assets/images/vector2.png" class="position-absolute" alt="...">
+                        </div>
+                        <div class="banner-img "><img src="./assets/images/banner_logo.png" alt="..."></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vector-img2 position-absolute top-50 start-100 translate-middle">
+            <img src="./assets/images/vector2.png" class="position-absolute" alt="...">
+        </div>
+    </div>
+
+    <div class="text-center my-5">
+        <h5 class=" fs-1 fw-bold">New Collection</h5>
+        <div class="pink-border mb-3"></div>
+        <p class="fs-6 fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper congue eros
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="new-collect">
+                    <img class="w-100 h-100" src="./assets/images/collection3.jpg" />
+                </div>
+                <div class="d-grid gap-2 position-relative">
+                    <button class="btn-product position-absolute w-75 border-0 rounded-3 p-2 " type="button">Nama
+                        Product</button>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="new-collect">
+                    <img class="w-100 h-100" src="./assets/images/collection2.jpg" />
+                </div>
+                <div class="d-grid gap-2 position-relative">
+                    <button class="btn-product position-absolute w-75 border-0 rounded-3 p-2" type="button">Nama
+                        Product</button>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="p-1 position-absolute">-50%</div>
+                <div class="new-collect">
+                    <img class="w-100 h-100" src="./assets/images/collection1.jpg" />
+                </div>
+                <div class="d-grid gap-2 position-relative">
+                    <button class="btn-product position-absolute w-75 border-0 rounded-3 p-2" type="button">Nama
+                        Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="best-items">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">        
+                        <!-- <div class="position-absolute top-0 start-50 translate-middle">
+                            <img src="./assets/images/vector2.png" class="position-absolute" alt="...">
+                        </div> -->
+                        <div class="new-item">
+                            <img class="all-items w-100 " src="./assets/images/balck_glas.png" />
+                        </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6 item-text">
+                    <h2 class="fw-bold">Best Item Since</br> 2020</h2>
+                    <p class="lh-lg fs-5 my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
+                        congue eros,
+                        eget
+                        tincidunt ipsum eleifend ut orem ipsum dolor sit amet consectetur adipiscing elit Sed
+                        ullamcorper congue eros eleifend ut tincidunt ipsum .
+                    </p>
+
+                    <ul class="list-group list-group-horizontal bg-white shadow p-3 justify-content-center count-sec">
+                        <li class="list-group-item text-center">
+                            <h3>2002</h3>
+                            <p class="w-100">Phaladora Founded</p>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <h3>8900+</h3>
+                            <p>Product Sold</p>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <h3>3105+</h3>
+                            <p>Best Reviews</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="product-text p-5 ">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3 text-white px-5 left-text">
+                    <h5 class="fs-1 fw-bold mt-5">Best Seller </br>Product</h5>
+                    <p class="fs-6 fw-normal my-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        ullamcorper congue eros</p>
+                    <button type="button" class="btn btn-lg fs-6 login-btn product-btn mt-3">LOGIN</button>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-9">
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active ">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="./assets/images/Image.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-6 fw-bold">Nama Product</h5>
+                                        <p>RM50 <span>RM40</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="./assets/images/Image.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-6 fw-bold">Nama Product</h5>
+                                        <p>RM50 <span>RM40</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="./assets/images/Image.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-6 fw-bold">Nama Product</h5>
+                                        <p>RM50 <span>RM40</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center my-5 ">
+            <h5 class=" fs-1 fw-bold">Our Product</h5>
+            <div class="pink-border mb-3"></div>
+            <ul class="nav nav-pills tab-sec justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link " href="#">HOT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ON SALE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">TRENDING NOW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">NEW ARRIVAL</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card border-0 product-card">
+                        <img class="card-img-top" src="./assets/images/image2.png" />
+                        <div class="card-body text-center">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <h5 class="card-title m-2 fs-6">Nama Product</h5>
+                            <p class="card-text"><span
+                                    class="text-decoration-line-through text-danger-emphasis">RM50</span>RM40</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card border-0 product-card">
+                        <img class="card-img-top" src="./assets/images/image2.png" />
+                        <div class="card-body text-center">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <h5 class="card-title m-2 fs-6">Nama Product</h5>
+                            <p class="card-text"><span
+                                    class="text-decoration-line-through text-danger-emphasis">RM50</span>RM40</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card border-0 product-card">
+                        <img class="card-img-top" src="./assets/images/image2.png" />
+                        <div class="card-body text-center">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <h5 class="card-title m-2 fs-6">Nama Product</h5>
+                            <p class="card-text"><span
+                                    class="text-decoration-line-through text-danger-emphasis">RM50</span>RM40</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card border-0 product-card">
+                        <img class="card-img-top" src="./assets/images/image2.png" />
+                        <div class="card-body text-center">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <h5 class="card-title m-2 fs-6">Nama Product</h5>
+                            <p class="card-text"><span
+                                    class="text-decoration-line-through text-danger-emphasis">RM50</span>RM40</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card border-0 product-card">
+                        <img class="card-img-top" src="./assets/images/image2.png" />
+                        <div class="card-body text-center">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <h5 class="card-title m-2 fs-6">Nama Product</h5>
+                            <p class="card-text"><span
+                                    class="text-decoration-line-through text-danger-emphasis">RM50</span>RM40</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card border-0 product-card">
+                        <img class="card-img-top" src="./assets/images/image2.png" />
+                        <div class="card-body text-center">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <h5 class="card-title m-2 fs-6">Nama Product</h5>
+                            <p class="card-text"><span
+                                    class="text-decoration-line-through text-danger-emphasis">RM50</span>RM40</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card border-0 product-card">
+                        <img class="card-img-top" src="./assets/images/image2.png" />
+                        <div class="card-body text-center">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <h5 class="card-title m-2 fs-6">Nama Product</h5>
+                            <p class="card-text"><span
+                                    class="text-decoration-line-through text-danger-emphasis">RM50</span>RM40</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card border-0 product-card">
+                        <img class="card-img-top" src="./assets/images/image2.png" />
+                        <div class="card-body text-center">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <h5 class="card-title m-2 fs-6">Nama Product</h5>
+                            <p class="card-text"><span
+                                    class="text-decoration-line-through text-danger-emphasis">RM50</span>RM40</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-grid my-5">
+                <button class="seeall-btn rounded-3 text-white p-2" type="button">SEE ALL</button>
+            </div>
+
+
+            <div class="brown-bg">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6 py-5 ">
+                        <div class="bg-left">
+                            <h5 class="fs-1 fw-bold">Deal of The Day</h5>
+                            <p class=" fs-6 fw-normal lh-lg my-4">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Sed
+                                ullamcorper congue erosget tincidunt </p>
+                            <div class="time">
+                                <div class="row px-2">
+                                    <div class="col text-center bg-white mx-2 pt-2">
+                                        <h6 class="fs-3">08</h6>
+                                        <p class="fs-6">Days</p>
+                                    </div>
+                                    <div class="col text-center bg-white mx-2 pt-2">
+                                        <h6 class="fs-3">09</h6>
+                                        <p class="fs-6">Hours</p>
+                                    </div>
+                                    <div class="col text-center bg-white mx-2 pt-2">
+                                        <h6 class="fs-3">14</h6>
+                                        <p class="fs-6">Min</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="seeall-btn text-white px-5 py-2 mt-5 btn-lg" type="button">SHOP NOW</button>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 border-none pt-5 text-center">
+                        <div class=" position-relative">
+                            <img src="./assets/images/deal-img.png" class="vector-banner" />
+                            <img src="./assets/images/vector2.png" class="vector-img position-absolute" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="light-bg mt-5 py-5">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 col-sm-12">
+                            <img src="./assets/images/add2.png" class="" />
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 p-5">
+                            <div class="bg-white p-5 h-100">
+                                <p class="fs-6 fw-light">Special Offer</p>
+                                <h5 class="fs-4 fw-bold ">Subscribe<br />
+                                    <span style="color: #ED1272;">Get 10% Off</span>
+                                </h5>
+                                <div class="input-group mt-4 w-50 bg-gray mx-auto">
+                                    <input type="text" class="form-control text-center border-0 "
+                                        placeholder="Enter your email" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                                <button class="seeall-btn text-white py-2 mt-5 btn-lg rounded-2"
+                                    type="button">Subscribe</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12">
+                            <img src="./assets/images/add1.png" class="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" d-flex justify-content-between px-2 py-5 ">
+                <h5>LATEST FROM BLOG</h5>
+                <a href="#" class="text-decoration-none text-dark">
+                    <p>SEE ALL</p>
+                </a>
+            </div>
+
+            <div class="seal-all px-2">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="position-relative">
+                            <img src="./assets/images/rectangle.jpg" class="w-100" />
+                            <div class="mobile position-absolute top-50 end-0 mx-4 p-3 mt-5 bg-white">
+                                <h5 class="fs-6 fw-bold">TOLONG LETAK GAMBER</h5>
+                                <p class="fs-6 fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                    lacus, auctor pretium ac ultrices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="position-relative">
+                            <img src="./assets/images/rectangle.jpg" class=" w-100" />
+
+                            <div class="mobile position-absolute top-50 end-0 mx-4 p-3 mt-5 bg-white">
+                                <h5 class="fs-6 fw-bold">TOLONG LETAK GAMBER</h5>
+                                <p class="fs-6 fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                    lacus, auctor pretium ac ultrices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="position-relative">
+                            <img src="./assets/images/rectangle.jpg" class="w-100" />
+                            <div class="mobile position-absolute top-50 end-0 mx-4 p-3 mt-5 bg-white">
+                                <h5 class="fs-6 fw-bold">TOLONG LETAK GAMBER</h5>
+                                <p class="fs-6 fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                    lacus, auctor pretium ac ultrices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contain-btn">
+            <div class="lode-btn d-grid col-2 mx-auto my-5 py-5">
+                <button type="button" class="btn btn-outline-dark ">Load more products</button>
+            </div>
+        </div>
+        <!-- footer -->
+
+        <div class="footer-bg py-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <h5 class="fs-6 text">BE IN TOUCH WITH US:</h5>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Recipient's username"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <button type="button" class="btn btn-outline-light mx-2 ">Primary</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 social-icon">
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            </li>
+                            <li class="list-group-item"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                            <li class="list-group-item"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                            <li class="list-group-item"><i class="fa fa-pinterest" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-4">
+            <div class="row footer-buttom">
+                <div class="col-sm-6 col-md-6 col-lg-3 col-xs-6 mt-3">
+                    <h5>CATEGORIES</h5>
+                    <ul class="list-group">
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Food</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Personal Care</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Accessories</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Beauty</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                    <h5>INFOMATION</h5>
+                    <ul class="list-group">
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">About Us</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Contact Us</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Blog</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">FAQs</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                    <h5>USEFUL LINKS</h5>
+                    <ul class="list-group">
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Terms & Conditions</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Returns</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Shipping</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item fw-light">Privacy Policy</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                    <h5>CONTACT US</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item fw-light">
+                            <i class="fa fa-map-marker me-2" aria-hidden="true"></i>
+                            <span>Address</span>
+                        </li>
+                        <li class="list-group-item fw-light">
+                            <i class="fa fa-phone me-2" aria-hidden="true"></i>
+                            <span>+60 125697433</span>
+                        </li>
+                        <li class="list-group-item fw-light">
+                            <i class="fa fa-clock-o me-2" aria-hidden="true"></i>
+                            <span>All week 24/7</span>
+                        </li>
+                        <li class="list-group-item fw-light">
+                            <i class="fa fa-envelope-o me-2" aria-hidden="true"></i>
+                            <span>Email</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+            </script>
+
+
+</body>
+
+</html>
