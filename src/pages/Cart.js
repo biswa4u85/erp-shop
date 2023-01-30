@@ -3,7 +3,7 @@ import { apiPostCall, apiGetCall } from '../hooks/SiteAPIs'
 import { useNavigate } from "react-router-dom";
 import { Row, Col, Checkbox } from 'antd';
 import { useLocalStorage } from '../hooks/useLocalStorage'
-import  productImg  from '../assets/images/product-img.png'
+import productImg from '../assets/images/product-img.png'
 
 function Cart() {
   const [user, setUser] = useLocalStorage("user", null);
@@ -29,150 +29,126 @@ function Cart() {
   console.log(data)
 
   return (
-    <>
-      <div className="container-fluid">
-        <div className="row  mt-1">
-          {/* sidebar-start */}
-          <div className="col-3 nav-left">
-            <div className="sidebar-bg p-4">
-              <div className="d-flex flex-row justify-content-between">
-                <h5 className="fs-5 ">Filters</h5>
-                <button type="button" className="btn btn-link">CLEAR ALL</button>
-              </div>
-              <div className="border-top mt-3 item-sec">
-                <h6 className="mt-4">ITEM GROUP</h6>
-                <div className="form-check mt-3">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label className="form-check-label" for="flexCheckDefault">
-                    Tab
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                  <label className="form-check-label" for="flexCheckChecked">
-                    Mobile
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                  <label className="form-check-label" for="flexCheckChecked">
-                    Laptop
-                  </label>
-                </div>
-              </div>
-              <div className="border-top mt-3 item-sec">
-                <h6 className="mt-4">COLOUR</h6>
-                <div className="form-check mt-3">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label className="form-check-label" for="flexCheckDefault">
-                    Awesome Black
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label className="form-check-label" for="flexCheckDefault">
-                    Awesome Blue
-                  </label>
-                </div>
+    <div className="row mx-5 mt-5">
+      <div className="col-sm-12 col-md-12 col-lg-8">
+        <div className="items bg-white rounded-3 p-2">
+          <h5 className="fs-5 ps-3 fw-bold">Items</h5>
+          <div className="line"></div>
 
-              </div>
-              <div className="border-top mt-3 item-sec">
-                <h6 className="mt-4">STORAGE</h6>
-                <div className="form-check mt-3">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label className="form-check-label" for="flexCheckDefault">
-                    128GB ｜8GB
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                  <label className="form-check-label" for="flexCheckDefault">
-                    128GB ｜8GB
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                  <label className="form-check-label" for="flexCheckChecked">
-                    128GB ｜8GB
-                  </label>
-                </div>
-              </div>
-            </div>
+          <div className="d-flex justify-content-between">
+            <div className="p-2 text-secondary ">Items</div>
+            <div className="p-2 ms-5  text-secondary">Quantity</div>
+            <div className="p-2  text-secondary ">Subtotal</div>
           </div>
-          {/* sidebar-end */}
-          <div className=" col-lg-9 col-md-12 col-sm-12">
-            <div className="product-bg py-4 mt-3">
-              <div className="row">
-                <div className="col-lg-8 col-md-8 col-sm-8 ">
-                  <div className="product-img">
-                    <img src={productImg} className=" w-100 h-100 " alt="..." />
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4">
-                  <div className="mt-4 center-sec">
-                    <h4 className="fw-normal">Best selling mobiles</h4>
-                    <h5 className="fw-bolder fs-6">Under Rs. 20,000</h5>
-                    <h6 style={{ fontSize: "12px" }}>Offer Code DIWA02</h6>
-                  </div>
-                </div>
+          <div className="line mb-3"></div>
+
+          {data?.items ? (data?.items).map((item, key) => <div key={key} className=" position-relative justify-content-between main">
+            <div className="text-center rounded product-image2 mt-2 mx-4">
+              <img src={item.image} alt={item.item_name} />
+            </div>
+            <div className="second-heading">
+              <p className="fw-bold">{item.item_name}</p>
+              <h5 className="fs-6 fw-normal text-secondary">Samsung Galaxy A53 5G-128-GB l6GB-AWESOME
+                BLUE</h5>
+              <span>Variant of <a href="#" className="stretched-link">Samsung Galaxy A53 5G</a></span>
+              <div className="form-floating my-3">
+                <textarea className="form-control" placeholder="Leave a comment here"
+                  id="floatingTextarea"></textarea>
               </div>
             </div>
-            <div className="product-bg py-4 mt-3">
-              <div className="row">
-                <div className="col-lg-8 col-md-8 col-sm-8 ">
-                  <div className="product-img">
-                    <img src={productImg} className=" w-100 h-100 " alt="..." />
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4">
-                  <div className="mt-4 center-sec">
-                    <h4 className="fw-normal">Best selling mobiles</h4>
-                    <h5 className="fw-bolder fs-6">Under Rs. 20,000</h5>
-                    <h6 style={{ fontSize: "12px" }}>Offer Code DIWA02</h6>
-                  </div>
-                </div>
-              </div>
+            <div className="form-section">
+              <form>
+                <div className="value-button" id="decrease" onclick="decreaseValue()"
+                  value="Decrease Value">-</div>
+                <input type="number" id="number" value="0" />
+                <div className="value-button" id="increase" onclick="increaseValue()"
+                  value="Increase Value">+</div>
+              </form>
             </div>
-            <div className="product-bg py-4 mt-3">
-              <div className="row">
-                <div className="col-lg-8 col-md-8 col-sm-8 ">
-                  <div className="product-img">
-                    <img src={productImg} className=" w-100 h-100 " alt="..." />
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4">
-                  <div className="mt-4 center-sec">
-                    <h4 className="fw-normal">Best selling mobiles</h4>
-                    <h5 className="fw-bolder fs-6">Under Rs. 20,000</h5>
-                    <h6 style={{ fontSize: "12px" }}>Offer Code DIWA02</h6>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <button type="button" className="btn btn-light mx-4 close"><i className="fa fa-times"
+                aria-hidden="true"></i>
+              </button>
             </div>
-            <div className="product-bg py-4 mt-3">
-              <div className="row">
-                <div className="col-lg-8 col-md-8 col-sm-8 ">
-                  <div className="product-img">
-                    <img src={productImg} className=" w-100 h-100 " alt="..." />
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4">
-                  <div className="mt-4 center-sec">
-                    <h4 className="fw-normal">Best selling mobiles</h4>
-                    <h5 className="fw-bolder fs-6">Under Rs. 20,000</h5>
-                    <h6 style={{ fontSize: "12px" }}>Offer Code DIWA02</h6>
-                  </div>
-                </div>
-              </div>
+            <div className="number">
+              <h5 className="fs-6 fw-normal text-right">$30,499.00</h5>
+              <h5 className="fs-6 fw-normal">Rate:$30,499.00</h5>
             </div>
+          </div>) : null}
 
 
 
+
+
+          <div className="border border-light"></div>
+          <div className="d-flex  justify-content-end my-3">
+            <h6 className="amount fw-bolder">Total</h6>
+            <h6 className="ms-5 fw-bolder">₹30,499.00</h6>
           </div>
-
+          <div className="d-flex justify-content-between my-3 gap-3">
+            <button className="btn text-primary btn-bg rounded-4" type="submit">Past Orders</button>
+            <button className="btn text-primary btn-bg rounded-4" type="submit">Continue Shopping</button>
+          </div>
         </div>
       </div>
-    </>
+      <div className="col-sm-12 col-md-12 col-lg-4">
+        <div className="apply-code d-flex justify-content-between mb-4">
+          <button type="button" className="btn btn-light ">Enter Coupon Code</button>
+          <button type="button" className="btn btn-primary"> Apply Coupon Code</button>
+        </div>
+        <div className="items bg-white rounded-3 py-4 px-3">
+          <h5 className="fs-6 fw-bold"> Payment Summary</h5>
+          <div className="line my-3"></div>
+          <div className="d-flex justify-content-between">
+            <p className="fs-6 fw-normal"> Net Total (1 items)</p>
+            <h5 className="fs-6 fw-normal">$30,499.00</h5>
+          </div>
+          <div className="line my-2"></div>
+          <div className="d-flex justify-content-between">
+            <h5 className="fs-6 fw-normal"> Grand Total </h5>
+            <h5 className="fs-6 fw-normal">$30,499.00</h5>
+          </div>
+          <div className="d-grid gap-2">
+            <button className="btn btn-primary mt-3" type="button"> Place Order</button>
+          </div>
+        </div>
+
+        <div className="items d-flex justify-content-between bg-white rounded-3 pt-4 pb-5 px-3 my-3">
+          <h6 className="fs-6 fw-bold"> Shipping Address</h6>
+          <a href="#"> Add a new address</a>
+        </div>
+
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+          <label className="form-check-label" for="flexCheckDefault">
+            Billing Address is same as Shipping Address
+          </label>
+        </div>
+
+        <div className="items bg-white rounded-3 py-4 px-3 mt-3">
+          <div className="d-flex justify-content-between">
+            <h5 className="fs-6 fw-normal"> Billing Address</h5>
+            <a href="#"> Add a new address</a>
+          </div>
+
+          <div className="d-flex justify-content-between mt-3">
+            <h5 className="fs-6 fw-bold">Home</h5>
+            <button type="button" className="btn btn-outline-primary btn-sm ">Change</button>
+          </div>
+          <div>
+            <p>Stes</p>
+            <p>Fsjhb</p>
+            <p>Pune</p>
+            <p>Maharashtra, state Code: 27</p>
+            <p>Postal Code : 422222</p>
+            <p>India</p>
+            <p>Phone: 838383838383</p>
+            <button type="button" className="btn btn-light text-primary"><i className="fa fa-pencil pe-2"
+              aria-hidden="true"></i>Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

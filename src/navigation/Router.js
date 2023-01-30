@@ -14,6 +14,7 @@ import Layout from "../pages/Layout";
 import Home from "../pages/Home";
 import Shop from "../pages/Shop";
 import Details from "../pages/Details";
+import Popular from "../pages/Popular";
 import Cart from "../pages/Cart";
 import Orders from "../pages/Orders";
 
@@ -35,6 +36,7 @@ function Routers() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/popular" element={<Popular />} />
           <Route path="/details" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Orders />} />

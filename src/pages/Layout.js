@@ -1,9 +1,10 @@
 import React from "react";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
-import { Button, DatePicker, Switch } from 'antd';
+import { useLocalStorage } from '../hooks/useLocalStorage'
 import logo from '../assets/images/logo-main.png';
 
 function Layout() {
+  const [token, setToken] = useLocalStorage("token", null);
   let navigate = useNavigate();
   return (
     <>
@@ -26,7 +27,7 @@ function Layout() {
                     <NavLink className="nav-link " to={"/shop"}>SHOP</NavLink>
                   </li>
                   <li className="nav-item px-3">
-                    <NavLink className="nav-link" to={"/cart"}>MOST POPULAR</NavLink>
+                    <NavLink className="nav-link" to={"/popular"}>MOST POPULAR</NavLink>
                   </li>
                   <li className="nav-item px-3">
                     <NavLink className="nav-link" to={"#"}>DEALS</NavLink>
@@ -40,8 +41,8 @@ function Layout() {
                     </div>
                   </li>
                 </ul>
-                <i className="fa fa-bell-o me-4" aria-hidden="true"></i>
-                <button type="button" onClick={() => navigate('/login')} className="btn btn-lg fs-6 login-btn">LOGIN</button>
+                <i className="fa fa-bell-o me-4" style={{ cursor: 'pointer' }} onClick={() => navigate('/cart')} aria-hidden="true"></i>
+                {token ? <button type="button" onClick={() => navigate('/orders')} className="btn btn-lg fs-6 login-btn">ORDERS</button> : <button type="button" onClick={() => navigate('/login')} className="btn btn-lg fs-6 login-btn">LOGIN</button>}
               </div>
             </div>
           </nav>
