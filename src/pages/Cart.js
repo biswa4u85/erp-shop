@@ -44,13 +44,12 @@ function Cart() {
 
           {data?.items ? (data?.items).map((item, key) => <div key={key} className=" position-relative justify-content-between main">
             <div className="text-center rounded product-image2 mt-2 mx-4">
-              <img src={item.image} alt={item.item_name} />
+              <img src={item.image} style={{ height: 'auto', width: '100%' }} alt={item.item_name} />
             </div>
             <div className="second-heading">
               <p className="fw-bold">{item.item_name}</p>
-              <h5 className="fs-6 fw-normal text-secondary">Samsung Galaxy A53 5G-128-GB l6GB-AWESOME
-                BLUE</h5>
-              <span>Variant of <a href="#" className="stretched-link">Samsung Galaxy A53 5G</a></span>
+              <h5 className="fs-6 fw-normal text-secondary">{item.description}</h5>
+              {/* <span>Variant of <a href="#" className="stretched-link">Samsung Galaxy A53 5G</a></span> */}
               <div className="form-floating my-3">
                 <textarea className="form-control" placeholder="Leave a comment here"
                   id="floatingTextarea"></textarea>
@@ -71,23 +70,20 @@ function Cart() {
               </button>
             </div>
             <div className="number">
-              <h5 className="fs-6 fw-normal text-right">$30,499.00</h5>
-              <h5 className="fs-6 fw-normal">Rate:$30,499.00</h5>
+              <h5 className="fs-6 fw-normal text-right">{data?.currency} {item.base_amount}</h5>
+              {/* <h5 className="fs-6 fw-normal">Rate:$30,499.00</h5> */}
             </div>
           </div>) : null}
-
-
-
 
 
           <div className="border border-light"></div>
           <div className="d-flex  justify-content-end my-3">
             <h6 className="amount fw-bolder">Total</h6>
-            <h6 className="ms-5 fw-bolder">₹30,499.00</h6>
+            <h6 className="ms-5 fw-bolder">{data?.currency} {data?.base_rounded_total}</h6>
           </div>
           <div className="d-flex justify-content-between my-3 gap-3">
-            <button className="btn text-primary btn-bg rounded-4" type="submit">Past Orders</button>
-            <button className="btn text-primary btn-bg rounded-4" type="submit">Continue Shopping</button>
+            {/* <button className="btn text-primary btn-bg rounded-4" type="submit">Past Orders</button> */}
+            <button onClick={() => navigate('/')} className="btn text-primary btn-bg rounded-4" type="submit">Continue Shopping</button>
           </div>
         </div>
       </div>
@@ -100,13 +96,13 @@ function Cart() {
           <h5 className="fs-6 fw-bold"> Payment Summary</h5>
           <div className="line my-3"></div>
           <div className="d-flex justify-content-between">
-            <p className="fs-6 fw-normal"> Net Total (1 items)</p>
-            <h5 className="fs-6 fw-normal">$30,499.00</h5>
+            <p className="fs-6 fw-normal"> Net Total ({data?.total_qty} items)</p>
+            <h5 className="fs-6 fw-normal">{data?.currency} {data?.base_net_total}</h5>
           </div>
           <div className="line my-2"></div>
           <div className="d-flex justify-content-between">
             <h5 className="fs-6 fw-normal"> Grand Total </h5>
-            <h5 className="fs-6 fw-normal">$30,499.00</h5>
+            <h5 className="fs-6 fw-normal">{data?.currency} {data?.base_rounded_total}</h5>
           </div>
           <div className="d-grid gap-2">
             <button className="btn btn-primary mt-3" type="button"> Place Order</button>
@@ -136,13 +132,7 @@ function Cart() {
             <button type="button" className="btn btn-outline-primary btn-sm ">Change</button>
           </div>
           <div>
-            <p>Stes</p>
-            <p>Fsjhb</p>
-            <p>Pune</p>
-            <p>Maharashtra, state Code: 27</p>
-            <p>Postal Code : 422222</p>
-            <p>India</p>
-            <p>Phone: 838383838383</p>
+            <span dangerouslySetInnerHTML={{ __html: data?.address_display }} ></span>
             <button type="button" className="btn btn-light text-primary"><i className="fa fa-pencil pe-2"
               aria-hidden="true"></i>Edit</button>
           </div>
