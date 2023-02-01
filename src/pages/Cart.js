@@ -29,7 +29,8 @@ function Cart() {
   console.log(data)
 
   return (
-    <div className="row mx-5 mt-5">
+    <div class="container">
+    <div className="row  mt-5">
       <div className="col-sm-12 col-md-12 col-lg-8">
         <div className="items bg-white rounded-3 p-2">
           <h5 className="fs-5 ps-3 fw-bold">Items</h5>
@@ -87,10 +88,23 @@ function Cart() {
           </div>
         </div>
       </div>
-      <div className="col-sm-12 col-md-12 col-lg-4">
+      <div className="col-sm-12 col-md-12 col-lg-4 mb-3">
         <div className="apply-code d-flex justify-content-between mb-4">
           <button type="button" className="btn btn-light ">Enter Coupon Code</button>
-          <button type="button" className="btn btn-primary"> Apply Coupon Code</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Apply Coupon Code
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Message</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Please enter a coupon code</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="items bg-white rounded-3 py-4 px-3">
           <h5 className="fs-6 fw-bold"> Payment Summary</h5>
@@ -129,7 +143,37 @@ function Cart() {
 
           <div className="d-flex justify-content-between mt-3">
             <h5 className="fs-6 fw-bold">Home</h5>
-            <button type="button" className="btn btn-outline-primary btn-sm ">Change</button>
+            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Change
+            </button>
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Address</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div className='border p-3 rounded address' >
+                      <h6>Stes</h6>
+                      <h6>Fsjhb</h6>
+                      <h6>Pune</h6>
+                      <h6>Maharashtra, state Code: 27</h6>
+                      <h6>Postal Code : 422222</h6>
+                      <h6>India</h6>
+                      <h6>Phone: 838383838383</h6>
+                      <button type="button" class="btn btn-light text-primary">Edit</button>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-link-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Set Address</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div>
             <span dangerouslySetInnerHTML={{ __html: data?.address_display }} ></span>
@@ -138,6 +182,7 @@ function Cart() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

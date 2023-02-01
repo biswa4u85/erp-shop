@@ -308,8 +308,10 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 2px;
 }
 .ant-btn-primary{background-color: #ED1272 !important;}
-
-
+.apply-code .btn{width: 200px;}
+.address h6{font-size: 13px;}
+.address button{font-size: 13px;}
+.modal-footer, .btn{justify-content: space-between !important; font-size: 13px;}
 /* media-screen */
 @media only screen and (max-width: 991px){
     .nav-left{display: none;}
@@ -378,7 +380,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* incress */
 form {
-    width: 218px;
+
     text-align: center;
 }
 
@@ -483,7 +485,8 @@ input[type=number]::-webkit-outer-spin-button {
     .close.mx-4{margin:0 auto !important;}
     .number{text-align: center;}
    .add-card.w-25{width: 35% !important;}
-
+.main-form .ant-col-offset-6{margin-inline-start: 25%;}
+.main-form .ant-col-offset-8{margin-inline-start: 0;}
 }
 
 
