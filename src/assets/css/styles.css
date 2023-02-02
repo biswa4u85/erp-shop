@@ -312,6 +312,16 @@ input[type=number]::-webkit-outer-spin-button {
 .address h6{font-size: 13px;}
 .address button{font-size: 13px;}
 .modal-footer, .btn{justify-content: space-between !important; font-size: 13px;}
+.main-form{padding: 5% 0 5% 0 !important; margin-top: 10%;}
+.pink-btn{background: linear-gradient(180deg, #ED1272 0%, #C34C9A 100%);}
+.address-btn{color:#ED1272; font-size: 16px; padding: 0;}
+.address-btn:hover{color:#ED1272;}
+.change-btn .btn:hover {
+    color: #ED1272 !important;
+    background-color: white !important;
+    border-color: var(--bs-btn-hover-border-color);
+}
+.btn-outline-light:hover{--bs-btn-hover-bg: none;color: white;}
 /* media-screen */
 @media only screen and (max-width: 991px){
     .nav-left{display: none;}
@@ -432,13 +442,14 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
+.main-form .ant-form-item-control-input-content{text-align: left !important;}
 
 
 }
 @media only screen and (max-width: 575px){
     .product-sec{width: 50% !important;}
-    
+    .main-form, .w-50{padding: 5% !important; width: 75%!important;}
+    .main-form .ant-col-offset-7{margin-inline-start: 0%;}
 }
 @media only screen and (max-width: 540px){
     .product-sec{width: 50% !important; text-align: -webkit-center;}
@@ -485,8 +496,11 @@ input[type=number]::-webkit-outer-spin-button {
     .close.mx-4{margin:0 auto !important;}
     .number{text-align: center;}
    .add-card.w-25{width: 35% !important;}
-.main-form .ant-col-offset-6{margin-inline-start: 25%;}
-.main-form .ant-col-offset-8{margin-inline-start: 0;}
+ .main-form .ant-col-offset-6{margin-inline-start: 25%;}
+ .main-form .ant-col-offset-8{margin-inline-start: 0;}
+ .apply-code .btn {
+    width: 146px;}
+    .main-form{margin: 50% auto;}
 }
 
 
