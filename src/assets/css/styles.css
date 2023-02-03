@@ -145,7 +145,6 @@ background: none;
 /* Home-css */
 .home-banner{
     background: linear-gradient(359.59deg, #C34C9A 0.34%, #ED1272 99.64%);
-    /* height: 635px; */
     position: relative;
 }
 .home-banner .translate-middle{transform: translate(-1%,-33%)!important;    }
@@ -250,7 +249,6 @@ background: none;
     cursor: pointer;
 }
 form #decrease {
-    /* margin-right: -4px; */
     border-radius: 8px 0 0 8px;
 }
 form #increase {
@@ -312,16 +310,44 @@ input[type=number]::-webkit-outer-spin-button {
 .address h6{font-size: 13px;}
 .address button{font-size: 13px;}
 .modal-footer, .btn{justify-content: space-between !important; font-size: 13px;}
-.main-form{padding: 5% 0 5% 0 !important; margin-top: 10%;}
+
+.login-bg{
+    height: 100vh;
+    position: relative;
+}
+.main-form{
+    max-width: 593px;
+    width: 100%;
+    position: absolute;
+    height: 60vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
 .pink-btn{background: linear-gradient(180deg, #ED1272 0%, #C34C9A 100%);}
 .address-btn{color:#ED1272; font-size: 16px; padding: 0;}
-.address-btn:hover{color:#ED1272;}
+.address-btn:hover{color:#ED1272;border: none;}
 .change-btn .btn:hover {
     color: #ED1272 !important;
     background-color: white !important;
     border-color: var(--bs-btn-hover-border-color);
 }
 .btn-outline-light:hover{--bs-btn-hover-bg: none;color: white;}
+.input-bg .form-control{
+    background-color: #f4f4f4;
+    border: var(--bs-border-width) solid #ffffff;
+}
+.input-bg .form-select{
+    background-color: #f4f4f4;
+    border: var(--bs-border-width) solid #ffffff;
+}
 /* media-screen */
 @media only screen and (max-width: 991px){
     .nav-left{display: none;}
@@ -449,7 +475,7 @@ input[type=number]::-webkit-outer-spin-button {
 @media only screen and (max-width: 575px){
     .product-sec{width: 50% !important;}
     .main-form, .w-50{padding: 5% !important; width: 75%!important;}
-    .main-form .ant-col-offset-7{margin-inline-start: 0%;}
+    .main-form .ant-col-offset-6{margin-inline-start: 0%;}
 }
 @media only screen and (max-width: 540px){
     .product-sec{width: 50% !important; text-align: -webkit-center;}
@@ -496,7 +522,7 @@ input[type=number]::-webkit-outer-spin-button {
     .close.mx-4{margin:0 auto !important;}
     .number{text-align: center;}
    .add-card.w-25{width: 35% !important;}
- .main-form .ant-col-offset-6{margin-inline-start: 25%;}
+ .main-form .ant-col-offset-6{margin-inline-start: 0%;}
  .main-form .ant-col-offset-8{margin-inline-start: 0;}
  .apply-code .btn {
     width: 146px;}

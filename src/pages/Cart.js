@@ -139,7 +139,7 @@ function Cart() {
                     <h1 className="modal-title fs-5" id="exampleModalLabel">New Address</h1>
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div className="modal-body">
+                  <div className="modal-body input-bg">
                     <form className=" g-3 needs-validation" >
 
                       <div className="col-md-12 position-relative">
@@ -188,7 +188,7 @@ function Cart() {
                         <label for="validationTooltip07" className="form-label mt-2">Address Type<span className='text-danger'>*</span></label>
                         {/* <input type="text" className="form-control" id="validationTooltip07" required/> */}
                         <select className="form-select" id="validationTooltip07" required>
-                          <option selected disabled value="">Billing</option>
+                          <option selected value="">Billing</option>
                           <option>Shipping</option>
                         </select>
 
@@ -294,7 +294,7 @@ function Cart() {
                         <label for="validationTooltip07" className="form-label mt-2">Address Type</label>
                         {/* <input type="text" className="form-control" id="validationTooltip07" required/> */}
                         <select className="form-select" id="validationTooltip07" required>
-                          <option selected disabled value="">Billing</option>
+                          <option selected value="">Billing</option>
                           <option>Shipping</option>
                         </select>
 
